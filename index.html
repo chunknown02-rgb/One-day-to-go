@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love Meerub ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:linear-gradient(-45deg,#0f172a,#1e293b,#4c1d95,#881337);
+    background-size:400% 400%;
+    animation:bg 15s ease infinite;
+    color:white;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.glass{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+.title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    color:#f8d7ff;
+    margin-bottom:30px;
+}
+
+.photo{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid rgba(255,255,255,.3);
+    box-shadow:0 0 40px rgba(255,255,255,.3);
+    margin-bottom:25px;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:35px 0;
+}
+
+.box{
+    width:110px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+}
+
+.box h2{
+    font-size:2rem;
+}
+
+.message{
+    max-width:800px;
+    margin:30px auto;
+    line-height:1.9;
+    color:#f5eaff;
+}
+
+.music-player{
+    margin-top:30px;
+}
+
+audio{
+    width:100%;
+    max-width:500px;
+}
+
+.footer{
+    margin-top:50px;
+    font-size:1.1rem;
+    color:#ffd6f7;
+}
+
+.hearts span{
+    position:fixed;
+    bottom:-100px;
+    font-size:25px;
+    animation:float 10s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+    20%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:25%;animation-delay:2s;}
+.hearts span:nth-child(3){left:50%;animation-delay:4s;}
+.hearts span:nth-child(4){left:70%;animation-delay:1s;}
+.hearts span:nth-child(5){left:90%;animation-delay:3s;}
+
+@media(max-width:768px){
+.title{
+font-size:2.8rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+<span>❤️</span>
+<span>🌷</span>
+<span>💖</span>
+<span>🌹</span>
+<span>💕</span>
+</div>
+
+<div class="container">
+
+<div class="glass">
+
+<h1 class="title">
+It's Just One Day Until Your Birthday 💗
+</h1>
+
+<p class="subtitle">
+I Love You So Much, Meerub Jee 🤍🫠
+</p>
+
+<!-- Replace image path -->
+<img src="meerub.jpg" class="photo" alt="Meerub">
+
+<div class="countdown">
+<div class="box">
+<h2 id="days">0</h2>
+<p>Days</p>
+</div>
+
+<div class="box">
+<h2 id="hours">0</h2>
+<p>Hours</p>
+</div>
+
+<div class="box">
+<h2 id="minutes">0</h2>
+<p>Minutes</p>
+</div>
+
+<div class="box">
+<h2 id="seconds">0</h2>
+<p>Seconds</p>
+</div>
+</div>
+
+<div class="message">
+My Dearest Meerub ❤️<br><br>
+
+Every moment with you is a blessing. Your smile brightens my darkest days and your love fills my heart with happiness.
+
+As your special day approaches, I want you to know that you mean everything to me.
+
+Thank you for being my peace, my happiness, my best friend and the love of my life.
+
+Happy Birthday In Advance, My Jaan 🌷🤍
+</div>
+
+<div class="music-player">
+<!-- Replace with your song -->
+<audio controls autoplay loop>
+<source src="love-song.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="footer">
+Made With Endless Love ❤️ By Your Husband
+</div>
+
+</div>
+
+</div>
+
+<script>
+const birthday = new Date("June 12, 2026 00:00:00").getTime();
+
+setInterval(()=>{
+const now = new Date().getTime();
+const distance = birthday - now;
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+</script>
+
+</body>
+  </html>
